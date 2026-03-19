@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Acquired",
+    "host": "Ben Gilbert & David Rosenthal",
+    "note": "The best long-form business history podcast alive. Each episode is a deep-dive into a single company — how it was built, the decisions that mattered, the moments it almost died. Episodes run 4+ hours and I listen to every minute.",
+    "topic": "business history"
+  },
+  {
+    "name": "Lex Fridman Podcast",
+    "host": "Lex Fridman",
+    "note": "At its best when Lex has scientists and mathematicians on. The episodes with Donald Knuth, Yann LeCun, and Roger Penrose are genuinely singular — you won't find that quality of conversation anywhere else.",
+    "topic": "technology & science"
+  },
+  {
+    "name": "The Knowledge Project",
+    "host": "Shane Parrish",
+    "note": "Mental models for decision-making, applied. Shane has a knack for getting guests to reveal their actual thinking process rather than their rehearsed narrative. Farnam Street at its best.",
+    "topic": "decision-making"
+  },
+  {
+    "name": "Huberman Lab",
+    "host": "Andrew Huberman",
+    "note": "Occasionally too long, but the protocols are genuinely evidence-based and the episodes on sleep, stress, and focus have changed my daily habits more than any book on the topic.",
+    "topic": "health & neuroscience"
+  },
+  {
+    "name": "Hardcore History",
+    "host": "Dan Carlin",
+    "note": "Dan Carlin turns history into drama without sacrificing accuracy. Blueprint for Armageddon (WWI) is the finest piece of audio storytelling I have ever encountered. Non-negotiable listening.",
+    "topic": "history"
+  },
+  {
+    "name": "Lenny's Podcast",
+    "host": "Lenny Rachitsky",
+    "note": "The most consistently useful product podcast. No fluff, no hype — just practitioners sharing what actually worked. The backlog alone is worth a year of commutes.",
+    "topic": "product"
+  }
+]
