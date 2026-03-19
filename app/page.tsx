@@ -1,65 +1,129 @@
-import Image from "next/image";
+'use client';
+
+import { useState } from 'react';
+import Nav from '@/components/Nav';
+import Hero from '@/components/Hero';
+import ProjectCard from '@/components/ProjectCard';
+import BookCard from '@/components/BookCard';
+import PodcastCard from '@/components/PodcastCard';
+import ContactForm from '@/components/ContactForm';
+
+import projectsData from '@/content/projects.json';
+import booksData from '@/content/books.json';
+import podcastsData from '@/content/podcasts.json';
+
+type ProjectType = 'work' | 'side';
 
 export default function Home() {
+  const [activeTab, setActiveTab] = useState<ProjectType>('work');
+
+  const filteredProjects = projectsData.filter((p) => p.type === activeTab);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <>
+      <Nav />
+
+      <main>
+        {/* ── Hero ─────────────────────────────── */}
+        <Hero />
+
+        {/* ── Work & Projects ──────────────────── */}
+        <section id="achievements" className="section">
+          <div className="container">
+            <p className="section-label">002 — WORK</p>
+            <h2 className="section-heading">Work &amp; Projects</h2>
+
+            <div className="projects-tabs" role="tablist" aria-label="Project filter">
+              <button
+                role="tab"
+                aria-selected={activeTab === 'work'}
+                className={`projects-tab${activeTab === 'work' ? ' projects-tab--active' : ''}`}
+                onClick={() => setActiveTab('work')}
+              >
+                Work
+              </button>
+              <button
+                role="tab"
+                aria-selected={activeTab === 'side'}
+                className={`projects-tab${activeTab === 'side' ? ' projects-tab--active' : ''}`}
+                onClick={() => setActiveTab('side')}
+              >
+                Side Projects
+              </button>
+            </div>
+
+            <div
+              className="cards-grid"
+              role="tabpanel"
+              aria-label={activeTab === 'work' ? 'Work projects' : 'Side projects'}
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+              {filteredProjects.map((project) => (
+                <ProjectCard key={project.title} project={project as { title: string; description: string; tags: string[]; link: string | null; period: string; type: 'work' | 'side' }} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Books ────────────────────────────── */}
+        <section id="books" className="section" style={{ background: 'var(--bg-subtle)' }}>
+          <div className="container">
+            <p className="section-label">003 — BOOKS</p>
+            <h2 className="section-heading">Books I Recommend</h2>
+
+            <div className="cards-grid cards-grid--books">
+              {booksData.map((book) => (
+                <BookCard key={book.title} book={book} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Podcasts ─────────────────────────── */}
+        <section id="podcasts" className="section">
+          <div className="container">
+            <p className="section-label">004 — PODCASTS</p>
+            <h2 className="section-heading">Podcasts I Recommend</h2>
+
+            <div className="cards-grid">
+              {podcastsData.map((podcast) => (
+                <PodcastCard key={podcast.name} podcast={podcast} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Contact ──────────────────────────── */}
+        <section
+          id="contact"
+          className="section"
+          style={{ background: 'var(--bg-subtle)' }}
+        >
+          <div className="container">
+            <p className="section-label">005 — CONTACT</p>
+            <h2 className="section-heading">Get In Touch</h2>
+
+            <div className="contact-grid">
+              <div>
+                <p className="contact-intro">
+                  Whether you&apos;re building something interesting, want to
+                  compare notes on a book, or just want to say hello — I&apos;d
+                  love to hear from you. I try to reply to everything.
+                </p>
+              </div>
+
+              <ContactForm />
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer className="footer">
+        <div className="container">
+          <p>
+            &copy; {new Date().getFullYear()} Max Cattarello. Built with Next.js.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </footer>
+    </>
   );
 }

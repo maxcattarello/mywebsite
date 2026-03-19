@@ -1,0 +1,62 @@
+[
+  {
+    "title": "The Remains of the Day",
+    "author": "Kazuo Ishiguro",
+    "note": "The most quietly devastating novel I've ever read. Stevens the butler is a masterclass in unreliable narration — and a meditation on how we lie to ourselves about the choices we've made.",
+    "genre": "fiction"
+  },
+  {
+    "title": "Zero to One",
+    "author": "Peter Thiel",
+    "note": "Disagree with half of it, and that's the point. It forces you to think about competition, monopoly, and what it actually means to build something new rather than iterating on what exists.",
+    "genre": "business"
+  },
+  {
+    "title": "Thinking, Fast and Slow",
+    "author": "Daniel Kahneman",
+    "note": "Dense but essential. Understanding the difference between System 1 and System 2 thinking changed how I run user research and how I make decisions under uncertainty.",
+    "genre": "psychology"
+  },
+  {
+    "title": "A Pattern Language",
+    "author": "Christopher Alexander",
+    "note": "Ostensibly about architecture, actually about everything. The way Alexander thinks about what makes spaces feel alive has influenced how I think about product design more than any product book.",
+    "genre": "design"
+  },
+  {
+    "title": "The Innovator's Dilemma",
+    "author": "Clayton Christensen",
+    "note": "Still the clearest framework for understanding why successful companies fail. Read it once and you'll see disruption patterns everywhere.",
+    "genre": "business"
+  },
+  {
+    "title": "Middlemarch",
+    "author": "George Eliot",
+    "note": "The best novel in the English language, I will die on this hill. Dorothea Brooke is one of the most fully realised characters in all of fiction. Read it slowly.",
+    "genre": "fiction"
+  },
+  {
+    "title": "The Mom Test",
+    "author": "Rob Fitzpatrick",
+    "note": "Tiny book, enormous impact. The most practical guide to doing customer interviews without fooling yourself. Required reading before any discovery call.",
+    "genre": "product"
+  },
+  {
+    "title": "Sapiens",
+    "author": "Yuval Noah Harari",
+    "note": "A sweeping history of humanity that makes you feel simultaneously tiny and responsible. The chapters on shared myths and how they organise society are particularly good.",
+    "genre": "non-fiction"
+  },
+  {
+    "title": "High Output Management",
+    "author": "Andy Grove",
+    "note": "Written in the 1980s and still the sharpest book on what management actually is. Grove is brutally honest about leverage, meetings, and what a manager's real job consists of.",
+    "genre": "management"
+  },
+  {
+    "title": "Exhalation",
+    "author": "Ted Chiang",
+    "note": "Short story collection. Chiang is the rare writer who takes ideas seriously — each story is a genuine thought experiment about time, memory, free will, or AI, executed with literary precision.",
+    "genre": "fiction"
+  }
+]

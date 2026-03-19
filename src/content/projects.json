@@ -1,0 +1,42 @@
+[
+  {
+    "title": "AI-Powered Analytics Platform",
+    "description": "Led product strategy and launch of a B2B analytics platform that uses ML to surface actionable insights from unstructured data. Grew from 0 to 500 paying customers in 18 months.",
+    "tags": ["product", "ai", "b2b"],
+    "link": "https://example.com",
+    "period": "2023–2024",
+    "type": "work"
+  },
+  {
+    "title": "Growth Infrastructure Overhaul",
+    "description": "Rebuilt the entire growth stack for a Series B fintech — tracking, attribution, lifecycle emails, and experimentation framework. Reduced CAC by 34% within one quarter.",
+    "tags": ["growth", "fintech", "ops"],
+    "link": null,
+    "period": "2022–2023",
+    "type": "work"
+  },
+  {
+    "title": "Developer Experience Redesign",
+    "description": "Owned the end-to-end redesign of a developer portal serving 20,000+ engineers. Improved time-to-first-API-call from 45 minutes to under 8.",
+    "tags": ["dx", "platform", "api"],
+    "link": "https://example.com",
+    "period": "2021–2022",
+    "type": "work"
+  },
+  {
+    "title": "Readwise Digest Bot",
+    "description": "A small automation that pulls your Readwise highlights each morning and sends a curated daily digest to Telegram. Built with Python and runs serverlessly on Railway.",
+    "tags": ["automation", "python", "side-project"],
+    "link": "https://github.com/example/readwise-bot",
+    "period": "2024",
+    "type": "side"
+  },
+  {
+    "title": "Local Eats Map",
+    "description": "A crowdsourced map of independently owned restaurants in my city — no chains, no ads, no dark patterns. Built with Astro, Mapbox, and a Notion database as the CMS.",
+    "tags": ["maps", "community", "astro"],
+    "link": "https://example.com",
+    "period": "2023",
+    "type": "side"
+  }
+]
