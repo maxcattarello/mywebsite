@@ -1,0 +1,96 @@
+---
+const links = [
+  { href: '#home',         label: 'About'    },
+  { href: '#achievements', label: 'Work'     },
+  { href: '#books',        label: 'Books'    },
+  { href: '#podcasts',     label: 'Podcasts' },
+  { href: '#contact',      label: 'Contact'  },
+];
+---
+
+<nav class="nav" id="main-nav" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="#home" class="nav__logo">Max Cattarello</a>
+
+    <ul class="nav__links" role="list">
+      {links.map(({ href, label }) => (
+        <li>
+          <a href={href} class="nav__link">{label}</a>
+        </li>
+      ))}
+    </ul>
+
+    <button
+      class="nav__hamburger"
+      id="hamburger"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="nav-overlay"
+    >
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+  </div>
+</nav>
+
+<div class="nav__overlay" id="nav-overlay" aria-hidden="true">
+  <ul role="list">
+    {links.map(({ href, label }) => (
+      <li>
+        <a href={href} class="nav__overlay-link">{label}</a>
+      </li>
+    ))}
+  </ul>
+</div>
+
+<script>
+  const nav       = document.getElementById('main-nav')!;
+  const hamburger = document.getElementById('hamburger')!;
+  const overlay   = document.getElementById('nav-overlay')!;
+
+  // Add blur/shadow on scroll
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('nav--scrolled', window.scrollY > 20);
+  }, { passive: true });
+
+  // Mobile menu toggle
+  function openMenu() {
+    overlay.classList.add('nav__overlay--open');
+    overlay.setAttribute('aria-hidden', 'false');
+    hamburger.setAttribute('aria-expanded', 'true');
+    hamburger.setAttribute('aria-label', 'Close menu');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    overlay.classList.remove('nav__overlay--open');
+    overlay.setAttribute('aria-hidden', 'true');
+    hamburger.setAttribute('aria-expanded', 'false');
+    hamburger.setAttribute('aria-label', 'Open menu');
+    document.body.style.overflow = '';
+  }
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = overlay.classList.contains('nav__overlay--open');
+    isOpen ? closeMenu() : openMenu();
+  });
+
+  // Close when a link is clicked
+  overlay.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // Smooth scroll for all anchor links (nav + overlay)
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      const href = (anchor as HTMLAnchorElement).getAttribute('href');
+      if (!href) return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script>

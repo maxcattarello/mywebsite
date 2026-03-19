@@ -1,0 +1,100 @@
+---
+---
+
+<form
+  class="contact-form"
+  id="contact-form"
+  novalidate
+  aria-label="Contact form"
+>
+  <!-- Name -->
+  <div class="form-field">
+    <input
+      id="name"
+      name="name"
+      type="text"
+      class="form-input"
+      placeholder=" "
+      required
+      autocomplete="name"
+      aria-required="true"
+    />
+    <label for="name" class="form-label">Name</label>
+  </div>
+
+  <!-- Email -->
+  <div class="form-field">
+    <input
+      id="email"
+      name="email"
+      type="email"
+      class="form-input"
+      placeholder=" "
+      required
+      autocomplete="email"
+      aria-required="true"
+    />
+    <label for="email" class="form-label">Email</label>
+  </div>
+
+  <!-- Message -->
+  <div class="form-field">
+    <textarea
+      id="message"
+      name="message"
+      class="form-input form-textarea"
+      placeholder=" "
+      required
+      rows="5"
+      aria-required="true"
+    ></textarea>
+    <label for="message" class="form-label">Message</label>
+  </div>
+
+  <button type="submit" class="btn-submit" id="submit-btn">
+    Send message
+  </button>
+
+  <p class="form-feedback form-feedback--success" id="form-success" role="status">
+    Thanks — I'll be in touch soon.
+  </p>
+  <p class="form-feedback form-feedback--error" id="form-error" role="alert">
+    Something went wrong. Please try again.
+  </p>
+</form>
+
+<script>
+  const form      = document.getElementById('contact-form') as HTMLFormElement;
+  const btn       = document.getElementById('submit-btn') as HTMLButtonElement;
+  const success   = document.getElementById('form-success') as HTMLElement;
+  const error     = document.getElementById('form-error') as HTMLElement;
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    btn.disabled    = true;
+    btn.textContent = 'Sending…';
+    success.style.display = 'none';
+    error.style.display   = 'none';
+
+    try {
+      const res = await fetch('https://formspree.io/f/REPLACE_THIS', {
+        method:  'POST',
+        body:    new FormData(form),
+        headers: { Accept: 'application/json' },
+      });
+
+      if (res.ok) {
+        success.style.display = 'block';
+        form.reset();
+      } else {
+        error.style.display = 'block';
+      }
+    } catch {
+      error.style.display = 'block';
+    } finally {
+      btn.disabled    = false;
+      btn.textContent = 'Send message';
+    }
+  });
+</script>

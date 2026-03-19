@@ -1,0 +1,176 @@
+---
+import Nav         from '../components/Nav.astro';
+import Hero        from '../components/Hero.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import BookCard    from '../components/BookCard.astro';
+import PodcastCard from '../components/PodcastCard.astro';
+import ContactForm from '../components/ContactForm.astro';
+import '../styles/global.css';
+
+import projects from '../content/projects.json';
+import books    from '../content/books.json';
+import podcasts from '../content/podcasts.json';
+
+const year = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Max Cattarello — product builder at the intersection of technology and human behaviour."
+    />
+    <meta property="og:title"       content="Max Cattarello" />
+    <meta property="og:description" content="Product builder at the intersection of technology and human behaviour." />
+    <meta property="og:type"        content="website" />
+    <title>Max Cattarello</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+
+  <body>
+    <Nav />
+
+    <main>
+
+      <!-- ── #home ──────────────────────────────────────────── -->
+      <Hero />
+
+      <!-- ── #achievements ──────────────────────────────────── -->
+      <section id="achievements" class="section">
+        <div class="container">
+          <p class="section-label">002 — WORK</p>
+          <h2 class="section-heading">Work &amp; Projects</h2>
+
+          <div class="projects-tabs" role="tablist" aria-label="Project type filter">
+            <button
+              class="projects-tab projects-tab--active"
+              role="tab"
+              aria-selected="true"
+              data-tab="work"
+            >
+              Work
+            </button>
+            <button
+              class="projects-tab"
+              role="tab"
+              aria-selected="false"
+              data-tab="side"
+            >
+              Side Projects
+            </button>
+          </div>
+
+          <div class="cards-grid" id="projects-grid" role="tabpanel">
+            {projects.map(p => (
+              <ProjectCard
+                title={p.title}
+                description={p.description}
+                tags={p.tags}
+                link={p.link}
+                period={p.period}
+                type={p.type as 'work' | 'side'}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- ── #books ─────────────────────────────────────────── -->
+      <section id="books" class="section section--subtle">
+        <div class="container">
+          <p class="section-label">003 — BOOKS</p>
+          <h2 class="section-heading">Books I Recommend</h2>
+
+          <div class="cards-grid">
+            {books.map(b => (
+              <BookCard
+                title={b.title}
+                author={b.author}
+                note={b.note}
+                genre={b.genre}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- ── #podcasts ──────────────────────────────────────── -->
+      <section id="podcasts" class="section">
+        <div class="container">
+          <p class="section-label">004 — PODCASTS</p>
+          <h2 class="section-heading">Podcasts I Recommend</h2>
+
+          <div class="cards-grid">
+            {podcasts.map(p => (
+              <PodcastCard
+                name={p.name}
+                host={p.host}
+                note={p.note}
+                topic={p.topic}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- ── #contact ───────────────────────────────────────── -->
+      <section id="contact" class="section section--subtle">
+        <div class="container">
+          <p class="section-label">005 — CONTACT</p>
+          <h2 class="section-heading">Get In Touch</h2>
+
+          <div class="contact-grid">
+            <div>
+              <p class="contact-intro">
+                Whether you're building something interesting, want to compare
+                notes on a book, or just want to say hello — I'd love to hear
+                from you. I try to reply to everything.
+              </p>
+            </div>
+
+            <ContactForm />
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; {year} Max Cattarello. Built with Astro.</p>
+      </div>
+    </footer>
+
+  </body>
+</html>
+
+<script>
+  // ── Projects tab filter (vanilla JS) ──────────────────────
+  const tabs  = document.querySelectorAll<HTMLButtonElement>('.projects-tab');
+  const cards = document.querySelectorAll<HTMLElement>('.project-card');
+
+  // Initialise: hide side projects
+  cards.forEach(card => {
+    if (card.dataset.type !== 'work') card.style.display = 'none';
+  });
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.tab;
+
+      // Update tab states
+      tabs.forEach(t => {
+        t.classList.toggle('projects-tab--active', t === tab);
+        t.setAttribute('aria-selected', String(t === tab));
+      });
+
+      // Show / hide cards
+      cards.forEach(card => {
+        card.style.display = card.dataset.type === target ? '' : 'none';
+      });
+    });
+  });
+</script>

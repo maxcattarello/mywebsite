@@ -1,0 +1,22 @@
+---
+interface Props {
+  name:  string;
+  host:  string;
+  note:  string;
+  topic: string;
+}
+
+const { name, host, note, topic } = Astro.props;
+---
+
+<article class="card podcast-card">
+  <div class="card__body">
+    <div class="card__header">
+      <h3 class="card__title">{name}</h3>
+      <span class="tag">{topic}</span>
+    </div>
+
+    <p class="card__author">Hosted by {host}</p>
+    <p class="card__description">{note}</p>
+  </div>
+</article>

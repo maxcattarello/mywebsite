@@ -1,0 +1,43 @@
+---
+interface Props {
+  title:       string;
+  description: string;
+  tags:        string[];
+  link:        string | null;
+  period:      string;
+  type:        'work' | 'side';
+}
+
+const { title, description, tags, link, period, type } = Astro.props;
+---
+
+<article class="card project-card" data-type={type}>
+  <div class="card__body">
+    <div class="card__header">
+      <h3 class="card__title">{title}</h3>
+      <span class="card__period">{period}</span>
+    </div>
+
+    <p class="card__description">{description}</p>
+
+    <div class="card__footer">
+      <div class="card__tags" aria-label="Tags">
+        {tags.map(tag => (
+          <span class="tag">{tag}</span>
+        ))}
+      </div>
+
+      {link && (
+        <a
+          href={link}
+          class="card__link"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`View ${title}`}
+        >
+          View →
+        </a>
+      )}
+    </div>
+  </div>
+</article>
