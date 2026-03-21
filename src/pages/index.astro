@@ -4,6 +4,7 @@ import Hero        from '../components/Hero.astro';
 import ProjectCard from '../components/ProjectCard.astro';
 import ShelfCard   from '../components/ShelfCard.astro';
 import ContactForm from '../components/ContactForm.astro';
+import ScrollHint  from '../components/ScrollHint.astro';
 import '../styles/global.css';
 
 import projects from '../content/projects.json';
@@ -75,6 +76,7 @@ const shelfTypes = ['All', ...[...new Set(shelf.map(item => item.type))].sort()]
               />
             ))}
           </div>
+          <ScrollHint />
         </div>
       </section>
 
@@ -117,6 +119,7 @@ const shelfTypes = ['All', ...[...new Set(shelf.map(item => item.type))].sort()]
               </button>
             </div>
           )}
+          <ScrollHint />
         </div>
       </section>
 
