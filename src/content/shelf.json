@@ -5,7 +5,8 @@
     "credit": "Kazuo Ishiguro",
     "topic": "fiction",
     "note": "The most quietly devastating novel I've ever read. Stevens the butler is a masterclass in unreliable narration — and a meditation on how we lie to ourselves about the choices we've made.",
-    "link": ""
+    "link": "",
+    "dateAdded": "2024-01-01"
   },
   {
     "type": "book",
@@ -13,7 +14,8 @@
     "credit": "Peter Thiel",
     "topic": "business",
     "note": "Disagree with half of it, and that's the point. It forces you to think about competition, monopoly, and what it actually means to build something new rather than iterating on what exists.",
-    "link": ""
+    "link": "",
+    "dateAdded": "2024-02-01"
   },
   {
     "type": "book",
@@ -21,7 +23,8 @@
     "credit": "Daniel Kahneman",
     "topic": "psychology",
     "note": "Dense but essential. Understanding the difference between System 1 and System 2 thinking changed how I run user research and how I make decisions under uncertainty.",
-    "link": ""
+    "link": "",
+    "dateAdded": "2024-03-01"
   },
   {
     "type": "book",
@@ -29,7 +32,8 @@
     "credit": "Christopher Alexander",
     "topic": "design",
     "note": "Ostensibly about architecture, actually about everything. The way Alexander thinks about what makes spaces feel alive has influenced how I think about product design more than any product book.",
-    "link": ""
+    "link": "",
+    "dateAdded": "2024-04-01"
   },
   {
     "type": "book",
@@ -37,7 +41,8 @@
     "credit": "Clayton Christensen",
     "topic": "business",
     "note": "Still the clearest framework for understanding why successful companies fail. Read it once and you'll see disruption patterns everywhere.",
-    "link": ""
+    "link": "",
+    "dateAdded": "2024-05-01"
   },
   {
     "type": "book",
@@ -45,7 +50,8 @@
     "credit": "George Eliot",
     "topic": "fiction",
     "note": "The best novel in the English language, I will die on this hill. Dorothea Brooke is one of the most fully realised characters in all of fiction. Read it slowly.",
-    "link": ""
+    "link": "",
+    "dateAdded": "2024-06-01"
   },
   {
     "type": "book",
@@ -53,7 +59,8 @@
     "credit": "Rob Fitzpatrick",
     "topic": "product",
     "note": "Tiny book, enormous impact. The most practical guide to doing customer interviews without fooling yourself. Required reading before any discovery call.",
-    "link": ""
+    "link": "",
+    "dateAdded": "2024-07-01"
   },
   {
     "type": "book",
@@ -61,7 +68,8 @@
     "credit": "Yuval Noah Harari",
     "topic": "non-fiction",
     "note": "A sweeping history of humanity that makes you feel simultaneously tiny and responsible. The chapters on shared myths and how they organise society are particularly good.",
-    "link": ""
+    "link": "",
+    "dateAdded": "2024-08-01"
   },
   {
     "type": "book",
@@ -69,7 +77,8 @@
     "credit": "Andy Grove",
     "topic": "management",
     "note": "Written in the 1980s and still the sharpest book on what management actually is. Grove is brutally honest about leverage, meetings, and what a manager's real job consists of.",
-    "link": ""
+    "link": "",
+    "dateAdded": "2024-09-01"
   },
   {
     "type": "book",
@@ -77,7 +86,8 @@
     "credit": "Ted Chiang",
     "topic": "fiction",
     "note": "Short story collection. Chiang is the rare writer who takes ideas seriously — each story is a genuine thought experiment about time, memory, free will, or AI, executed with literary precision.",
-    "link": ""
+    "link": "",
+    "dateAdded": "2024-10-01"
   },
   {
     "type": "podcast",
@@ -85,7 +95,8 @@
     "credit": "Ben Gilbert & David Rosenthal",
     "topic": "business",
     "note": "The best long-form business history podcast alive. Each episode is a deep-dive into a single company — how it was built, the decisions that mattered, the moments it almost died. Episodes run 4+ hours and I listen to every minute.",
-    "link": "https://www.acquired.fm"
+    "link": "https://www.acquired.fm",
+    "dateAdded": "2024-11-01"
   },
   {
     "type": "podcast",
@@ -93,7 +104,8 @@
     "credit": "Lex Fridman",
     "topic": "technology",
     "note": "At its best when Lex has scientists and mathematicians on. The episodes with Donald Knuth, Yann LeCun, and Roger Penrose are genuinely singular — you won't find that quality of conversation anywhere else.",
-    "link": "https://lexfridman.com/podcast"
+    "link": "https://lexfridman.com/podcast",
+    "dateAdded": "2024-12-01"
   },
   {
     "type": "podcast",
@@ -101,7 +113,8 @@
     "credit": "Shane Parrish",
     "topic": "decision-making",
     "note": "Mental models for decision-making, applied. Shane has a knack for getting guests to reveal their actual thinking process rather than their rehearsed narrative. Farnam Street at its best.",
-    "link": "https://fs.blog/knowledge-project-podcast"
+    "link": "https://fs.blog/knowledge-project-podcast",
+    "dateAdded": "2025-01-01"
   },
   {
     "type": "podcast",
@@ -109,7 +122,8 @@
     "credit": "Andrew Huberman",
     "topic": "health",
     "note": "Occasionally too long, but the protocols are genuinely evidence-based and the episodes on sleep, stress, and focus have changed my daily habits more than any book on the topic.",
-    "link": "https://www.hubermanlab.com"
+    "link": "https://www.hubermanlab.com",
+    "dateAdded": "2025-02-01"
   },
   {
     "type": "podcast",
@@ -117,7 +131,8 @@
     "credit": "Dan Carlin",
     "topic": "history",
     "note": "Dan Carlin turns history into drama without sacrificing accuracy. Blueprint for Armageddon (WWI) is the finest piece of audio storytelling I have ever encountered. Non-negotiable listening.",
-    "link": "https://www.dancarlin.com/hardcore-history-series"
+    "link": "https://www.dancarlin.com/hardcore-history-series",
+    "dateAdded": "2025-03-01"
   },
   {
     "type": "podcast",
@@ -125,7 +140,8 @@
     "credit": "Lenny Rachitsky",
     "topic": "product",
     "note": "The most consistently useful product podcast. No fluff, no hype — just practitioners sharing what actually worked. The backlog alone is worth a year of commutes.",
-    "link": "https://www.lennyspodcast.com"
+    "link": "https://www.lennyspodcast.com",
+    "dateAdded": "2025-04-01"
   },
   {
     "type": "article",
@@ -133,7 +149,8 @@
     "credit": "Paul Graham",
     "topic": "startups",
     "note": "The single best piece of advice for anyone building something early-stage. The instinct to automate before you understand is deadly. Do it by hand first. Learn. Then scale.",
-    "link": "https://paulgraham.com/ds.html"
+    "link": "https://paulgraham.com/ds.html",
+    "dateAdded": "2025-05-01"
   },
   {
     "type": "tech",
@@ -141,7 +158,8 @@
     "credit": "Author / Creator",
     "topic": "tools",
     "note": "Replace this with a tech tool, app, or resource you'd recommend. What does it do, and why does it stick with you?",
-    "link": ""
+    "link": "",
+    "dateAdded": "2025-06-01"
   },
   {
     "type": "tech",
@@ -149,7 +167,8 @@
     "credit": "Author / Creator",
     "topic": "tools",
     "note": "Replace this with a tech tool, app, or resource you'd recommend. What does it do, and why does it stick with you?",
-    "link": ""
+    "link": "",
+    "dateAdded": "2025-07-01"
   },
   {
     "type": "music",
@@ -157,7 +176,8 @@
     "credit": "Artist",
     "topic": "genre",
     "note": "Replace this with music you'd recommend. What makes it worth listening to?",
-    "link": ""
+    "link": "",
+    "dateAdded": "2025-08-01"
   },
   {
     "type": "music",
@@ -165,7 +185,8 @@
     "credit": "Artist",
     "topic": "genre",
     "note": "Replace this with music you'd recommend. What makes it worth listening to?",
-    "link": ""
+    "link": "",
+    "dateAdded": "2025-09-01"
   },
   {
     "type": "movie",
@@ -173,7 +194,8 @@
     "credit": "Director",
     "topic": "genre",
     "note": "Replace this with a film you'd recommend. What makes it worth watching?",
-    "link": ""
+    "link": "",
+    "dateAdded": "2025-10-01"
   },
   {
     "type": "movie",
@@ -181,6 +203,7 @@
     "credit": "Director",
     "topic": "genre",
     "note": "Replace this with a film you'd recommend. What makes it worth watching?",
-    "link": ""
+    "link": "",
+    "dateAdded": "2026-03-21"
   }
 ]

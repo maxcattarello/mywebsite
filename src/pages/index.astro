@@ -7,9 +7,12 @@ import ContactForm from '../components/ContactForm.astro';
 import '../styles/global.css';
 
 import projects from '../content/projects.json';
-import shelf    from '../content/shelf.json';
+import shelfRaw from '../content/shelf.json';
 
-const shelfTypes = ['All', ...new Set(shelf.map(item => item.type))];
+const shelf = [...shelfRaw].sort((a, b) =>
+  new Date(b.dateAdded).getTime() - new Date(a.dateAdded).getTime()
+);
+const shelfTypes = ['All', ...[...new Set(shelf.map(item => item.type))].sort()];
 ---
 
 <!doctype html>
@@ -107,7 +110,7 @@ const shelfTypes = ['All', ...new Set(shelf.map(item => item.type))];
             ))}
           </div>
 
-          {shelf.length > 10 && (
+          {shelf.length > 3 && (
             <div class="shelf-expand">
               <button class="shelf-expand__btn" id="shelf-expand-btn">
                 Show more
@@ -181,7 +184,7 @@ const shelfTypes = ['All', ...new Set(shelf.map(item => item.type))];
   const pills      = document.querySelectorAll<HTMLButtonElement>('.shelf-pill');
   const shelfCards = document.querySelectorAll<HTMLElement>('.shelf-card');
   const expandBtn  = document.getElementById('shelf-expand-btn') as HTMLButtonElement | null;
-  const LIMIT      = 10;
+  const LIMIT      = 3;
   let expanded     = false;
   let activeFilter = 'All';
 
