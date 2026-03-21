@@ -1,0 +1,41 @@
+---
+interface Props {
+  type: string;
+  title: string;
+  credit: string;
+  topic: string;
+  note: string;
+  link?: string;
+  index?: number;
+}
+
+const { type, title, credit, topic, note, link, index = 0 } = Astro.props;
+---
+
+<div class="card shelf-card" data-type={type} data-index={index}>
+  <div class="card__body">
+    <div class="shelf-card__header">
+      <div class="shelf-card__meta">
+        <p class="card__title card__title--display">{title}</p>
+        <p class="card__author">{credit}</p>
+      </div>
+      <span class="shelf-card__badge">{type}</span>
+    </div>
+
+    <p class="card__description">{note}</p>
+
+    <div class="card__footer">
+      <span class="tag">{topic}</span>
+      {link && (
+        <a
+          href={link}
+          class="card__link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit ↗
+        </a>
+      )}
+    </div>
+  </div>
+</div>

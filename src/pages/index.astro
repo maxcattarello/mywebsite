@@ -2,16 +2,14 @@
 import Nav         from '../components/Nav.astro';
 import Hero        from '../components/Hero.astro';
 import ProjectCard from '../components/ProjectCard.astro';
-import BookCard    from '../components/BookCard.astro';
-import PodcastCard from '../components/PodcastCard.astro';
+import ShelfCard   from '../components/ShelfCard.astro';
 import ContactForm from '../components/ContactForm.astro';
 import '../styles/global.css';
 
 import projects from '../content/projects.json';
-import books    from '../content/books.json';
-import podcasts from '../content/podcasts.json';
+import shelf    from '../content/shelf.json';
 
-const year = new Date().getFullYear();
+const shelfTypes = ['All', ...new Set(shelf.map(item => item.type))];
 ---
 
 <!doctype html>
@@ -38,11 +36,10 @@ const year = new Date().getFullYear();
       <!-- ── #home ──────────────────────────────────────────── -->
       <Hero />
 
-      <!-- ── #achievements ──────────────────────────────────── -->
-      <section id="achievements" class="section">
+      <!-- ── #projects ──────────────────────────────────────── -->
+      <section id="projects" class="section">
         <div class="container">
-          <p class="section-label">002 — WORK</p>
-          <h2 class="section-heading">Work &amp; Projects</h2>
+          <h2 class="section-heading">Projects</h2>
 
           <div class="projects-tabs" role="tablist" aria-label="Project type filter">
             <button
@@ -78,49 +75,52 @@ const year = new Date().getFullYear();
         </div>
       </section>
 
-      <!-- ── #books ─────────────────────────────────────────── -->
-      <section id="books" class="section section--subtle">
+      <!-- ── #shelf ─────────────────────────────────────────── -->
+      <section id="shelf" class="section section--subtle">
         <div class="container">
-          <p class="section-label">003 — BOOKS</p>
-          <h2 class="section-heading">Books I Recommend</h2>
+          <h2 class="section-heading">My Shelf</h2>
 
-          <div class="cards-grid">
-            {books.map(b => (
-              <BookCard
-                title={b.title}
-                author={b.author}
-                note={b.note}
-                genre={b.genre}
+          <div class="shelf-filters" role="tablist" aria-label="Shelf type filter">
+            {shelfTypes.map((type, i) => (
+              <button
+                class={`shelf-pill${i === 0 ? ' shelf-pill--active' : ''}`}
+                role="tab"
+                aria-selected={i === 0 ? 'true' : 'false'}
+                data-shelf-filter={type}
+              >
+                {type}
+              </button>
+            ))}
+          </div>
+
+          <div class="cards-grid" id="shelf-grid">
+            {shelf.map((item, i) => (
+              <ShelfCard
+                type={item.type}
+                title={item.title}
+                credit={item.credit}
+                topic={item.topic}
+                note={item.note}
+                link={item.link}
+                index={i}
               />
             ))}
           </div>
+
+          {shelf.length > 10 && (
+            <div class="shelf-expand">
+              <button class="shelf-expand__btn" id="shelf-expand-btn">
+                Show more
+              </button>
+            </div>
+          )}
         </div>
       </section>
 
-      <!-- ── #podcasts ──────────────────────────────────────── -->
-      <section id="podcasts" class="section">
+      <!-- ── #write ─────────────────────────────────────────── -->
+      <section id="write" class="section">
         <div class="container">
-          <p class="section-label">004 — PODCASTS</p>
-          <h2 class="section-heading">Podcasts I Recommend</h2>
-
-          <div class="cards-grid">
-            {podcasts.map(p => (
-              <PodcastCard
-                name={p.name}
-                host={p.host}
-                note={p.note}
-                topic={p.topic}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <!-- ── #contact ───────────────────────────────────────── -->
-      <section id="contact" class="section section--subtle">
-        <div class="container">
-          <p class="section-label">005 — CONTACT</p>
-          <h2 class="section-heading">Get In Touch</h2>
+          <h2 class="section-heading">Write Me</h2>
 
           <div class="contact-grid">
             <div>
@@ -129,6 +129,14 @@ const year = new Date().getFullYear();
                 notes on a book, or just want to say hello — I'd love to hear
                 from you. I try to reply to everything.
               </p>
+              <a
+                href="https://www.linkedin.com/in/massimiliano-cattarello/"
+                class="btn-linkedin"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Connect on LinkedIn
+              </a>
             </div>
 
             <ContactForm />
@@ -140,7 +148,7 @@ const year = new Date().getFullYear();
 
     <footer class="footer">
       <div class="container">
-        <p>&copy; {year} Max Cattarello. Built with Astro.</p>
+        <p>&copy; 2026 Max Cattarello</p>
       </div>
     </footer>
 
@@ -148,11 +156,10 @@ const year = new Date().getFullYear();
 </html>
 
 <script>
-  // ── Projects tab filter (vanilla JS) ──────────────────────
+  // ── Projects tab filter ────────────────────────────────────
   const tabs  = document.querySelectorAll<HTMLButtonElement>('.projects-tab');
   const cards = document.querySelectorAll<HTMLElement>('.project-card');
 
-  // Initialise: hide side projects
   cards.forEach(card => {
     if (card.dataset.type !== 'work') card.style.display = 'none';
   });
@@ -160,17 +167,65 @@ const year = new Date().getFullYear();
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       const target = tab.dataset.tab;
-
-      // Update tab states
       tabs.forEach(t => {
         t.classList.toggle('projects-tab--active', t === tab);
         t.setAttribute('aria-selected', String(t === tab));
       });
-
-      // Show / hide cards
       cards.forEach(card => {
         card.style.display = card.dataset.type === target ? '' : 'none';
       });
     });
   });
+
+  // ── Shelf filter pills + expand ────────────────────────────
+  const pills      = document.querySelectorAll<HTMLButtonElement>('.shelf-pill');
+  const shelfCards = document.querySelectorAll<HTMLElement>('.shelf-card');
+  const expandBtn  = document.getElementById('shelf-expand-btn') as HTMLButtonElement | null;
+  const LIMIT      = 10;
+  let expanded     = false;
+  let activeFilter = 'All';
+
+  function applyShelfView() {
+    let visible = 0;
+    shelfCards.forEach(card => {
+      const matchesFilter = activeFilter === 'All' || card.dataset.type === activeFilter;
+      const withinLimit   = activeFilter !== 'All' || expanded || visible < LIMIT;
+
+      if (matchesFilter && withinLimit) {
+        card.style.display = '';
+        visible++;
+      } else if (matchesFilter && !withinLimit) {
+        card.style.display = 'none';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    if (expandBtn) {
+      const total = activeFilter === 'All'
+        ? shelfCards.length
+        : [...shelfCards].filter(c => c.dataset.type === activeFilter).length;
+      expandBtn.parentElement!.style.display =
+        !expanded && activeFilter === 'All' && total > LIMIT ? '' : 'none';
+    }
+  }
+
+  pills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      activeFilter = pill.dataset.shelfFilter ?? 'All';
+      expanded = false;
+      pills.forEach(p => {
+        p.classList.toggle('shelf-pill--active', p === pill);
+        p.setAttribute('aria-selected', String(p === pill));
+      });
+      applyShelfView();
+    });
+  });
+
+  expandBtn?.addEventListener('click', () => {
+    expanded = true;
+    applyShelfView();
+  });
+
+  applyShelfView();
 </script>

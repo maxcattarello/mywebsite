@@ -1,0 +1,186 @@
+[
+  {
+    "type": "book",
+    "title": "The Remains of the Day",
+    "credit": "Kazuo Ishiguro",
+    "topic": "fiction",
+    "note": "The most quietly devastating novel I've ever read. Stevens the butler is a masterclass in unreliable narration — and a meditation on how we lie to ourselves about the choices we've made.",
+    "link": ""
+  },
+  {
+    "type": "book",
+    "title": "Zero to One",
+    "credit": "Peter Thiel",
+    "topic": "business",
+    "note": "Disagree with half of it, and that's the point. It forces you to think about competition, monopoly, and what it actually means to build something new rather than iterating on what exists.",
+    "link": ""
+  },
+  {
+    "type": "book",
+    "title": "Thinking, Fast and Slow",
+    "credit": "Daniel Kahneman",
+    "topic": "psychology",
+    "note": "Dense but essential. Understanding the difference between System 1 and System 2 thinking changed how I run user research and how I make decisions under uncertainty.",
+    "link": ""
+  },
+  {
+    "type": "book",
+    "title": "A Pattern Language",
+    "credit": "Christopher Alexander",
+    "topic": "design",
+    "note": "Ostensibly about architecture, actually about everything. The way Alexander thinks about what makes spaces feel alive has influenced how I think about product design more than any product book.",
+    "link": ""
+  },
+  {
+    "type": "book",
+    "title": "The Innovator's Dilemma",
+    "credit": "Clayton Christensen",
+    "topic": "business",
+    "note": "Still the clearest framework for understanding why successful companies fail. Read it once and you'll see disruption patterns everywhere.",
+    "link": ""
+  },
+  {
+    "type": "book",
+    "title": "Middlemarch",
+    "credit": "George Eliot",
+    "topic": "fiction",
+    "note": "The best novel in the English language, I will die on this hill. Dorothea Brooke is one of the most fully realised characters in all of fiction. Read it slowly.",
+    "link": ""
+  },
+  {
+    "type": "book",
+    "title": "The Mom Test",
+    "credit": "Rob Fitzpatrick",
+    "topic": "product",
+    "note": "Tiny book, enormous impact. The most practical guide to doing customer interviews without fooling yourself. Required reading before any discovery call.",
+    "link": ""
+  },
+  {
+    "type": "book",
+    "title": "Sapiens",
+    "credit": "Yuval Noah Harari",
+    "topic": "non-fiction",
+    "note": "A sweeping history of humanity that makes you feel simultaneously tiny and responsible. The chapters on shared myths and how they organise society are particularly good.",
+    "link": ""
+  },
+  {
+    "type": "book",
+    "title": "High Output Management",
+    "credit": "Andy Grove",
+    "topic": "management",
+    "note": "Written in the 1980s and still the sharpest book on what management actually is. Grove is brutally honest about leverage, meetings, and what a manager's real job consists of.",
+    "link": ""
+  },
+  {
+    "type": "book",
+    "title": "Exhalation",
+    "credit": "Ted Chiang",
+    "topic": "fiction",
+    "note": "Short story collection. Chiang is the rare writer who takes ideas seriously — each story is a genuine thought experiment about time, memory, free will, or AI, executed with literary precision.",
+    "link": ""
+  },
+  {
+    "type": "podcast",
+    "title": "Acquired",
+    "credit": "Ben Gilbert & David Rosenthal",
+    "topic": "business",
+    "note": "The best long-form business history podcast alive. Each episode is a deep-dive into a single company — how it was built, the decisions that mattered, the moments it almost died. Episodes run 4+ hours and I listen to every minute.",
+    "link": "https://www.acquired.fm"
+  },
+  {
+    "type": "podcast",
+    "title": "Lex Fridman Podcast",
+    "credit": "Lex Fridman",
+    "topic": "technology",
+    "note": "At its best when Lex has scientists and mathematicians on. The episodes with Donald Knuth, Yann LeCun, and Roger Penrose are genuinely singular — you won't find that quality of conversation anywhere else.",
+    "link": "https://lexfridman.com/podcast"
+  },
+  {
+    "type": "podcast",
+    "title": "The Knowledge Project",
+    "credit": "Shane Parrish",
+    "topic": "decision-making",
+    "note": "Mental models for decision-making, applied. Shane has a knack for getting guests to reveal their actual thinking process rather than their rehearsed narrative. Farnam Street at its best.",
+    "link": "https://fs.blog/knowledge-project-podcast"
+  },
+  {
+    "type": "podcast",
+    "title": "Huberman Lab",
+    "credit": "Andrew Huberman",
+    "topic": "health",
+    "note": "Occasionally too long, but the protocols are genuinely evidence-based and the episodes on sleep, stress, and focus have changed my daily habits more than any book on the topic.",
+    "link": "https://www.hubermanlab.com"
+  },
+  {
+    "type": "podcast",
+    "title": "Hardcore History",
+    "credit": "Dan Carlin",
+    "topic": "history",
+    "note": "Dan Carlin turns history into drama without sacrificing accuracy. Blueprint for Armageddon (WWI) is the finest piece of audio storytelling I have ever encountered. Non-negotiable listening.",
+    "link": "https://www.dancarlin.com/hardcore-history-series"
+  },
+  {
+    "type": "podcast",
+    "title": "Lenny's Podcast",
+    "credit": "Lenny Rachitsky",
+    "topic": "product",
+    "note": "The most consistently useful product podcast. No fluff, no hype — just practitioners sharing what actually worked. The backlog alone is worth a year of commutes.",
+    "link": "https://www.lennyspodcast.com"
+  },
+  {
+    "type": "article",
+    "title": "Do Things That Don't Scale",
+    "credit": "Paul Graham",
+    "topic": "startups",
+    "note": "The single best piece of advice for anyone building something early-stage. The instinct to automate before you understand is deadly. Do it by hand first. Learn. Then scale.",
+    "link": "https://paulgraham.com/ds.html"
+  },
+  {
+    "type": "tech",
+    "title": "Placeholder Tech Tool",
+    "credit": "Author / Creator",
+    "topic": "tools",
+    "note": "Replace this with a tech tool, app, or resource you'd recommend. What does it do, and why does it stick with you?",
+    "link": ""
+  },
+  {
+    "type": "tech",
+    "title": "Placeholder Tech Tool 2",
+    "credit": "Author / Creator",
+    "topic": "tools",
+    "note": "Replace this with a tech tool, app, or resource you'd recommend. What does it do, and why does it stick with you?",
+    "link": ""
+  },
+  {
+    "type": "music",
+    "title": "Placeholder Album or Artist",
+    "credit": "Artist",
+    "topic": "genre",
+    "note": "Replace this with music you'd recommend. What makes it worth listening to?",
+    "link": ""
+  },
+  {
+    "type": "music",
+    "title": "Placeholder Album or Artist 2",
+    "credit": "Artist",
+    "topic": "genre",
+    "note": "Replace this with music you'd recommend. What makes it worth listening to?",
+    "link": ""
+  },
+  {
+    "type": "movie",
+    "title": "Placeholder Movie",
+    "credit": "Director",
+    "topic": "genre",
+    "note": "Replace this with a film you'd recommend. What makes it worth watching?",
+    "link": ""
+  },
+  {
+    "type": "movie",
+    "title": "Placeholder Movie 2",
+    "credit": "Director",
+    "topic": "genre",
+    "note": "Replace this with a film you'd recommend. What makes it worth watching?",
+    "link": ""
+  }
+]
