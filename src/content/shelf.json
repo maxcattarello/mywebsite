@@ -1,209 +1,263 @@
 [
   {
-    "type": "book",
-    "title": "The Remains of the Day",
-    "credit": "Kazuo Ishiguro",
-    "topic": "fiction",
-    "note": "The most quietly devastating novel I've ever read. Stevens the butler is a masterclass in unreliable narration — and a meditation on how we lie to ourselves about the choices we've made.",
-    "link": "",
-    "dateAdded": "2024-01-01"
+    "type": "tool",
+    "title": "Notion",
+    "credit": "Notion Labs",
+    "topic": "productivity",
+    "note": "My second brain. Everything I know, plan, or want to remember lives here. The closest thing I've found to thinking in software.",
+    "link": "https://notion.so",
+    "dateAdded": "2026-03-22"
+  },
+  {
+    "type": "tool",
+    "title": "Todoist",
+    "credit": "Doist",
+    "topic": "productivity",
+    "note": "Deceptively simple, endlessly reliable. The app that keeps my days from becoming noise.",
+    "link": "https://todoist.com",
+    "dateAdded": "2026-03-15"
+  },
+  {
+    "type": "tool",
+    "title": "Claude",
+    "credit": "Anthropic",
+    "topic": "AI",
+    "note": "My LLM of choice. The thing that takes an idea in my head and helps make it real faster than I ever thought possible.",
+    "link": "https://claude.ai",
+    "dateAdded": "2026-03-08"
+  },
+  {
+    "type": "tool",
+    "title": "Apple Podcasts",
+    "credit": "Apple",
+    "topic": "audio",
+    "note": "Still the podcast app I reach for after 15 years. Nothing has beaten it for me: simplicity, reliability, and it's always just there.",
+    "link": "https://apps.apple.com/us/app/apple-podcasts/id525463029",
+    "dateAdded": "2026-03-01"
+  },
+  {
+    "type": "tool",
+    "title": "FutMob",
+    "credit": "FutMob",
+    "topic": "football",
+    "note": "Everything you need to follow football in one place. Scores, stats, live updates. Built for people who actually care about the game.",
+    "link": "https://www.fotmob.com/",
+    "dateAdded": "2026-02-22"
+  },
+  {
+    "type": "tool",
+    "title": "Nike Run Club",
+    "credit": "Nike",
+    "topic": "running",
+    "note": "The app that got me to 2,700 km and counting.",
+    "link": "https://www.nike.com/de/nrc-app",
+    "dateAdded": "2026-02-15"
+  },
+  {
+    "type": "tool",
+    "title": "NYT Games",
+    "credit": "The New York Times",
+    "topic": "games",
+    "note": "A non-negotiable part of my morning. Currently on a Wordle streak with 97% success rate (777 games played to date).",
+    "link": "https://nytimes.com/games",
+    "dateAdded": "2026-02-08"
+  },
+  {
+    "type": "tool",
+    "title": "AirPods Pro",
+    "credit": "Apple",
+    "topic": "hardware",
+    "note": "At this point they're just part of my body. The hardware that made everything else on this list better.",
+    "link": "https://www.apple.com/airpods-pro/",
+    "dateAdded": "2026-02-01"
+  },
+  {
+    "type": "tool",
+    "title": "MacBook Air",
+    "credit": "Apple",
+    "topic": "hardware",
+    "note": "The machine that does everything and more. Best laptop I've ever owned.",
+    "link": "https://www.apple.com/macbook-air/",
+    "dateAdded": "2026-01-25"
   },
   {
     "type": "book",
-    "title": "Zero to One",
-    "credit": "Peter Thiel",
-    "topic": "business",
-    "note": "Disagree with half of it, and that's the point. It forces you to think about competition, monopoly, and what it actually means to build something new rather than iterating on what exists.",
-    "link": "",
-    "dateAdded": "2024-02-01"
-  },
-  {
-    "type": "book",
-    "title": "Thinking, Fast and Slow",
-    "credit": "Daniel Kahneman",
-    "topic": "psychology",
-    "note": "Dense but essential. Understanding the difference between System 1 and System 2 thinking changed how I run user research and how I make decisions under uncertainty.",
-    "link": "",
-    "dateAdded": "2024-03-01"
-  },
-  {
-    "type": "book",
-    "title": "A Pattern Language",
-    "credit": "Christopher Alexander",
-    "topic": "design",
-    "note": "Ostensibly about architecture, actually about everything. The way Alexander thinks about what makes spaces feel alive has influenced how I think about product design more than any product book.",
-    "link": "",
-    "dateAdded": "2024-04-01"
-  },
-  {
-    "type": "book",
-    "title": "The Innovator's Dilemma",
-    "credit": "Clayton Christensen",
-    "topic": "business",
-    "note": "Still the clearest framework for understanding why successful companies fail. Read it once and you'll see disruption patterns everywhere.",
-    "link": "",
-    "dateAdded": "2024-05-01"
-  },
-  {
-    "type": "book",
-    "title": "Middlemarch",
-    "credit": "George Eliot",
-    "topic": "fiction",
-    "note": "The best novel in the English language, I will die on this hill. Dorothea Brooke is one of the most fully realised characters in all of fiction. Read it slowly.",
-    "link": "",
-    "dateAdded": "2024-06-01"
-  },
-  {
-    "type": "book",
-    "title": "The Mom Test",
-    "credit": "Rob Fitzpatrick",
-    "topic": "product",
-    "note": "Tiny book, enormous impact. The most practical guide to doing customer interviews without fooling yourself. Required reading before any discovery call.",
-    "link": "",
-    "dateAdded": "2024-07-01"
-  },
-  {
-    "type": "book",
-    "title": "Sapiens",
-    "credit": "Yuval Noah Harari",
+    "title": "Empire of AI",
+    "credit": "Karen Hao",
     "topic": "non-fiction",
-    "note": "A sweeping history of humanity that makes you feel simultaneously tiny and responsible. The chapters on shared myths and how they organise society are particularly good.",
-    "link": "",
-    "dateAdded": "2024-08-01"
+    "note": "The most honest and unsettling account of how AI is actually being built, and who bears the cost. Essential reading if you work in tech.",
+    "link": "https://www.amazon.de/-/en/Empire-AI-Dreams-Nightmares-Altmans/dp/B0DQSBZZNH/",
+    "dateAdded": "2026-01-18"
   },
   {
     "type": "book",
-    "title": "High Output Management",
-    "credit": "Andy Grove",
-    "topic": "management",
-    "note": "Written in the 1980s and still the sharpest book on what management actually is. Grove is brutally honest about leverage, meetings, and what a manager's real job consists of.",
-    "link": "",
-    "dateAdded": "2024-09-01"
+    "title": "Blood in the Garden",
+    "credit": "Chris Herring",
+    "topic": "non-fiction",
+    "note": "The inside story of the New York Knicks' most chaotic era. You don't need to love basketball to love this book. It's really about ambition, dysfunction, and what happens when egos run unchecked.",
+    "link": "https://www.amazon.de/-/en/Blood-Garden-Flagrant-History-Knicks/dp/1982132124/",
+    "dateAdded": "2026-01-11"
   },
   {
     "type": "book",
-    "title": "Exhalation",
-    "credit": "Ted Chiang",
+    "title": "Born to Run",
+    "credit": "Bruce Springsteen",
+    "topic": "memoir",
+    "note": "Not a rock autobiography. A genuine piece of writing. Springsteen excavates where his drive comes from with a honesty most people never manage in private, let alone in print.",
+    "link": "https://www.amazon.de/-/en/Born-Run-Bruce-Springsteen/dp/1471157822/",
+    "dateAdded": "2026-01-04"
+  },
+  {
+    "type": "book",
+    "title": "Supercommunicators",
+    "credit": "Charles Duhigg",
+    "topic": "non-fiction",
+    "note": "A practical and surprisingly moving book about what actually happens when people connect. Changed how I listen.",
+    "link": "https://www.amazon.de/-/en/Supercommunicators-Unlock-Secret-Language-Connection/dp/0593732235/",
+    "dateAdded": "2025-12-28"
+  },
+  {
+    "type": "book",
+    "title": "The Road",
+    "credit": "Cormac McCarthy",
     "topic": "fiction",
-    "note": "Short story collection. Chiang is the rare writer who takes ideas seriously — each story is a genuine thought experiment about time, memory, free will, or AI, executed with literary precision.",
-    "link": "",
-    "dateAdded": "2024-10-01"
+    "note": "The bleakest and most beautiful book I've ever read. McCarthy strips language down to nothing and somehow makes it say everything.",
+    "link": "https://www.amazon.de/-/en/Road-post-apocalyptic-classic-Pulitzer-Collection/dp/1035003791/",
+    "dateAdded": "2025-12-21"
+  },
+  {
+    "type": "book",
+    "title": "La Profezia dell'Armadillo",
+    "credit": "Zerocalcare",
+    "topic": "fiction",
+    "note": "Italian graphic novel that hit closer to home than most prose ever has. Funny, melancholic, and painfully recognisable if you grew up in Rome in the 2000s.",
+    "link": "https://www.amazon.de/-/en/profezia-dellarmadillo-Artist-Zerocalcare/dp/8865438533/",
+    "dateAdded": "2025-12-14"
+  },
+  {
+    "type": "podcast",
+    "title": "Hard Fork",
+    "credit": "Kevin Roose & Casey Newton",
+    "topic": "technology",
+    "note": "The best weekly debrief on tech culture. Smart without being smug, and genuinely funny. Rare for anything that covers Silicon Valley.",
+    "link": "https://open.spotify.com/show/44fllCS2FTFr2x2kjP9xeT",
+    "dateAdded": "2025-12-07"
   },
   {
     "type": "podcast",
     "title": "Acquired",
     "credit": "Ben Gilbert & David Rosenthal",
     "topic": "business",
-    "note": "The best long-form business history podcast alive. Each episode is a deep-dive into a single company — how it was built, the decisions that mattered, the moments it almost died. Episodes run 4+ hours and I listen to every minute.",
-    "link": "https://www.acquired.fm",
-    "dateAdded": "2024-11-01"
+    "note": "Long-form deep dives into how great companies were actually built. Every episode is a proper case study. The kind of thing business school should have been.",
+    "link": "https://open.spotify.com/show/7Fj0XEuUQLUqoMZQdsLXqp",
+    "dateAdded": "2025-11-30"
   },
   {
     "type": "podcast",
-    "title": "Lex Fridman Podcast",
-    "credit": "Lex Fridman",
+    "title": "Freakonomics Radio",
+    "credit": "Stephen Dubner",
+    "topic": "economics",
+    "note": "Still the gold standard for making data and economics feel alive. Recent discovery, although it's been going for years.",
+    "link": "https://open.spotify.com/show/6z4NLXyHPga1UmSJsPK7G1",
+    "dateAdded": "2025-11-23"
+  },
+  {
+    "type": "podcast",
+    "title": "The Diary of a CEO",
+    "credit": "Steven Bartlett",
+    "topic": "business",
+    "note": "Long, honest conversations with people who've built something real. The interview style gets to things most podcasts don't reach.",
+    "link": "https://open.spotify.com/show/7iQXmUT7XGuZSzAMjoNWlX",
+    "dateAdded": "2025-11-16"
+  },
+  {
+    "type": "podcast",
+    "title": "Easyapple",
+    "credit": "Easyapple",
     "topic": "technology",
-    "note": "At its best when Lex has scientists and mathematicians on. The episodes with Donald Knuth, Yann LeCun, and Roger Penrose are genuinely singular — you won't find that quality of conversation anywhere else.",
-    "link": "https://lexfridman.com/podcast",
-    "dateAdded": "2024-12-01"
+    "note": "The Italian Apple podcast I've listened to for more than 10 years. Rigorous, opinionated, and always worth the time if you're in the Apple ecosystem.",
+    "link": "https://open.spotify.com/show/2nOcVxKXtkXfIcwq8s8vrZ?si=948266d4ec2e4892",
+    "dateAdded": "2025-11-09"
   },
   {
     "type": "podcast",
-    "title": "The Knowledge Project",
-    "credit": "Shane Parrish",
-    "topic": "decision-making",
-    "note": "Mental models for decision-making, applied. Shane has a knack for getting guests to reveal their actual thinking process rather than their rehearsed narrative. Farnam Street at its best.",
-    "link": "https://fs.blog/knowledge-project-podcast",
-    "dateAdded": "2025-01-01"
+    "title": "La Riserva",
+    "credit": "La Riserva",
+    "topic": "football",
+    "note": "Italian football analysis done properly with a fun touch to it. It's like going to a bar with a friend.",
+    "link": "https://open.spotify.com/show/0xkobCLfOEvwbJqB2vkube?si=3402bb1ae78c446d",
+    "dateAdded": "2025-11-02"
   },
   {
     "type": "podcast",
-    "title": "Huberman Lab",
-    "credit": "Andrew Huberman",
-    "topic": "health",
-    "note": "Occasionally too long, but the protocols are genuinely evidence-based and the episodes on sleep, stress, and focus have changed my daily habits more than any book on the topic.",
-    "link": "https://www.hubermanlab.com",
-    "dateAdded": "2025-02-01"
+    "title": "SmartLess",
+    "credit": "Jason Bateman, Sean Hayes & Will Arnett",
+    "topic": "entertainment",
+    "note": "Pure joy. Three friends who happen to be funny interviewing people they genuinely love. The antidote to everything heavy on this list.",
+    "link": "https://open.spotify.com/show/0Yzd0g8NYmn27k2HFNplv7",
+    "dateAdded": "2025-10-26"
   },
   {
     "type": "podcast",
-    "title": "Hardcore History",
-    "credit": "Dan Carlin",
-    "topic": "history",
-    "note": "Dan Carlin turns history into drama without sacrificing accuracy. Blueprint for Armageddon (WWI) is the finest piece of audio storytelling I have ever encountered. Non-negotiable listening.",
-    "link": "https://www.dancarlin.com/hardcore-history-series",
-    "dateAdded": "2025-03-01"
-  },
-  {
-    "type": "podcast",
-    "title": "Lenny's Podcast",
-    "credit": "Lenny Rachitsky",
-    "topic": "product",
-    "note": "The most consistently useful product podcast. No fluff, no hype — just practitioners sharing what actually worked. The backlog alone is worth a year of commutes.",
-    "link": "https://www.lennyspodcast.com",
-    "dateAdded": "2025-04-01"
-  },
-  {
-    "type": "article",
-    "title": "Do Things That Don't Scale",
-    "credit": "Paul Graham",
-    "topic": "startups",
-    "note": "The single best piece of advice for anyone building something early-stage. The instinct to automate before you understand is deadly. Do it by hand first. Learn. Then scale.",
-    "link": "https://paulgraham.com/ds.html",
-    "dateAdded": "2025-05-01"
-  },
-  {
-    "type": "tech",
-    "title": "Placeholder Tech Tool",
-    "credit": "Author / Creator",
-    "topic": "tools",
-    "note": "Replace this with a tech tool, app, or resource you'd recommend. What does it do, and why does it stick with you?",
-    "link": "",
-    "dateAdded": "2025-06-01"
-  },
-  {
-    "type": "tech",
-    "title": "Placeholder Tech Tool 2",
-    "credit": "Author / Creator",
-    "topic": "tools",
-    "note": "Replace this with a tech tool, app, or resource you'd recommend. What does it do, and why does it stick with you?",
-    "link": "",
-    "dateAdded": "2025-07-01"
+    "title": "The Interface",
+    "credit": "Karen Hao, Tom Germain & Nicky Woolf",
+    "topic": "technology",
+    "note": "Three sharp journalists debating the tech stories that matter every week. No guests, no jargon. BBC at its best.",
+    "link": "https://open.spotify.com/show/4J8jzpLa58VMTeY5xGUxxG",
+    "dateAdded": "2025-10-19"
   },
   {
     "type": "music",
-    "title": "Placeholder Album or Artist",
-    "credit": "Artist",
-    "topic": "genre",
-    "note": "Replace this with music you'd recommend. What makes it worth listening to?",
-    "link": "",
-    "dateAdded": "2025-08-01"
+    "title": "Born to Run",
+    "credit": "Bruce Springsteen",
+    "topic": "rock",
+    "note": "The album that makes you feel like the open road is a real place you can drive to. Side one is as close to perfect as rock gets.",
+    "link": "https://open.spotify.com/album/43YIoHKSrEw2GJsWmhZIpu",
+    "dateAdded": "2025-10-12"
   },
   {
     "type": "music",
-    "title": "Placeholder Album or Artist 2",
-    "credit": "Artist",
-    "topic": "genre",
-    "note": "Replace this with music you'd recommend. What makes it worth listening to?",
-    "link": "",
-    "dateAdded": "2025-09-01"
+    "title": "Wasting Light",
+    "credit": "Foo Fighters",
+    "topic": "rock",
+    "note": "Recorded in Dave Grohl's garage on tape. It sounds like it, in the best possible way. Raw, loud, and completely alive.",
+    "link": "https://open.spotify.com/album/5lnQLEUiVDkLbFJHXHQu9m",
+    "dateAdded": "2025-10-05"
   },
   {
-    "type": "movie",
-    "title": "Placeholder Movie",
-    "credit": "Director",
-    "topic": "genre",
-    "note": "Replace this with a film you'd recommend. What makes it worth watching?",
-    "link": "",
-    "dateAdded": "2025-10-01"
+    "type": "music",
+    "title": "Folklore",
+    "credit": "Taylor Swift",
+    "topic": "indie folk",
+    "note": "The album that made a lot of people reassess what they thought about Taylor Swift. Quiet, introspective, and genuinely great songwriting.",
+    "link": "https://open.spotify.com/album/2fenSS68JI1h4Fo296JfGr",
+    "dateAdded": "2025-09-28"
   },
   {
-    "type": "movie",
-    "title": "Placeholder Movie 2",
-    "credit": "Director",
-    "topic": "genre",
-    "note": "Replace this with a film you'd recommend. What makes it worth watching?",
-    "link": "",
-    "dateAdded": "2026-03-21"
+    "type": "music",
+    "title": "AM",
+    "credit": "Arctic Monkeys",
+    "topic": "rock",
+    "note": "The album that turned Arctic Monkeys from a guitar band into something stranger and more seductive. R U Mine? still sounds like nothing else.",
+    "link": "https://open.spotify.com/album/41vPD50kQ7JeamkxQW7Vuy",
+    "dateAdded": "2025-09-21"
+  },
+  {
+    "type": "music",
+    "title": "Vinyl Record Player",
+    "credit": "Audio-Technica LP120xBTUSB",
+    "topic": "hardware",
+    "note": "The ritual of putting a record on is half the point. Slows everything down in exactly the right way.",
+    "link": "https://www.amazon.de/dp/B08CRRSYB8",
+    "dateAdded": "2025-09-14"
+  },
+  {
+    "type": "fashion",
+    "title": "New Balance 2002R",
+    "credit": "New Balance",
+    "topic": "sneakers",
+    "note": "The shoe I keep coming back to. Understated, well-made, and goes with everything. Proof that the best design is the kind you stop noticing.",
+    "link": "https://www.newbalance.de/en/shop-by-model/2002/",
+    "dateAdded": "2025-09-07"
   }
 ]

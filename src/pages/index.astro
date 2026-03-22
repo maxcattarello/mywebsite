@@ -45,26 +45,7 @@ const shelfTypes = ['All', ...[...new Set(shelf.map(item => item.type))].sort()]
         <div class="container">
           <h2 class="section-heading">Projects</h2>
 
-          <div class="projects-tabs" role="tablist" aria-label="Project type filter">
-            <button
-              class="projects-tab projects-tab--active"
-              role="tab"
-              aria-selected="true"
-              data-tab="work"
-            >
-              Work
-            </button>
-            <button
-              class="projects-tab"
-              role="tab"
-              aria-selected="false"
-              data-tab="side"
-            >
-              Side Projects
-            </button>
-          </div>
-
-          <div class="cards-grid" id="projects-grid" role="tabpanel">
+          <div class="cards-grid" id="projects-grid">
             {projects.map(p => (
               <ProjectCard
                 title={p.title}
@@ -162,27 +143,6 @@ const shelfTypes = ['All', ...[...new Set(shelf.map(item => item.type))].sort()]
 </html>
 
 <script>
-  // ── Projects tab filter ────────────────────────────────────
-  const tabs  = document.querySelectorAll<HTMLButtonElement>('.projects-tab');
-  const cards = document.querySelectorAll<HTMLElement>('.project-card');
-
-  cards.forEach(card => {
-    if (card.dataset.type !== 'work') card.style.display = 'none';
-  });
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      const target = tab.dataset.tab;
-      tabs.forEach(t => {
-        t.classList.toggle('projects-tab--active', t === tab);
-        t.setAttribute('aria-selected', String(t === tab));
-      });
-      cards.forEach(card => {
-        card.style.display = card.dataset.type === target ? '' : 'none';
-      });
-    });
-  });
-
   // ── Shelf filter pills + expand ────────────────────────────
   const pills      = document.querySelectorAll<HTMLButtonElement>('.shelf-pill');
   const shelfCards = document.querySelectorAll<HTMLElement>('.shelf-card');
