@@ -45,6 +45,12 @@ const shelfTypes = ['All', ...[...new Set(shelf.map(item => item.type))].sort()]
         <div class="container">
           <h2 class="section-heading">Projects</h2>
 
+          <div class="shelf-filters" role="tablist" aria-label="Project type filter">
+            <button class="shelf-pill shelf-pill--active" role="tab" aria-selected="true" data-project-filter="all">All</button>
+            <button class="shelf-pill" role="tab" aria-selected="false" data-project-filter="work">Work-related</button>
+            <button class="shelf-pill" role="tab" aria-selected="false" data-project-filter="personal">Personal projects</button>
+          </div>
+
           <div class="cards-grid" id="projects-grid">
             {projects.map(p => (
               <ProjectCard
@@ -53,7 +59,7 @@ const shelfTypes = ['All', ...[...new Set(shelf.map(item => item.type))].sort()]
                 tags={p.tags}
                 link={p.link}
                 period={p.period}
-                type={p.type as 'work' | 'side'}
+                type={p.type}
               />
             ))}
           </div>
@@ -95,9 +101,8 @@ const shelfTypes = ['All', ...[...new Set(shelf.map(item => item.type))].sort()]
 
           {shelf.length > 3 && (
             <div class="shelf-expand">
-              <button class="shelf-expand__btn" id="shelf-expand-btn">
-                Show more
-              </button>
+              <button class="shelf-expand__btn" id="shelf-expand-btn">Show more</button>
+              <button class="shelf-expand__btn" id="shelf-collapse-btn" style="display:none">Collapse</button>
             </div>
           )}
           <ScrollHint />
@@ -143,13 +148,31 @@ const shelfTypes = ['All', ...[...new Set(shelf.map(item => item.type))].sort()]
 </html>
 
 <script>
+  // ── Project filter pills ───────────────────────────────────
+  const projectPills = document.querySelectorAll<HTMLButtonElement>('[data-project-filter]');
+  const projectCards = document.querySelectorAll<HTMLElement>('.project-card');
+
+  projectPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      const filter = pill.dataset.projectFilter ?? 'all';
+      projectPills.forEach(p => {
+        p.classList.toggle('shelf-pill--active', p === pill);
+        p.setAttribute('aria-selected', String(p === pill));
+      });
+      projectCards.forEach(card => {
+        card.style.display = filter === 'all' || card.dataset.type === filter ? '' : 'none';
+      });
+    });
+  });
+
   // ── Shelf filter pills + expand ────────────────────────────
   const pills      = document.querySelectorAll<HTMLButtonElement>('.shelf-pill');
   const shelfCards = document.querySelectorAll<HTMLElement>('.shelf-card');
-  const expandBtn  = document.getElementById('shelf-expand-btn') as HTMLButtonElement | null;
-  const LIMIT      = 3;
-  let expanded     = false;
-  let activeFilter = 'All';
+  const expandBtn   = document.getElementById('shelf-expand-btn') as HTMLButtonElement | null;
+  const collapseBtn = document.getElementById('shelf-collapse-btn') as HTMLButtonElement | null;
+  const LIMIT       = 3;
+  let expanded      = false;
+  let activeFilter  = 'All';
 
   function applyShelfView() {
     let visible = 0;
@@ -160,20 +183,18 @@ const shelfTypes = ['All', ...[...new Set(shelf.map(item => item.type))].sort()]
       if (matchesFilter && withinLimit) {
         card.style.display = '';
         visible++;
-      } else if (matchesFilter && !withinLimit) {
-        card.style.display = 'none';
       } else {
         card.style.display = 'none';
       }
     });
 
-    if (expandBtn) {
-      const total = activeFilter === 'All'
-        ? shelfCards.length
-        : [...shelfCards].filter(c => c.dataset.type === activeFilter).length;
-      expandBtn.parentElement!.style.display =
-        !expanded && activeFilter === 'All' && total > LIMIT ? '' : 'none';
-    }
+    const total = activeFilter === 'All'
+      ? shelfCards.length
+      : [...shelfCards].filter(c => c.dataset.type === activeFilter).length;
+    const showButtons = activeFilter === 'All' && total > LIMIT;
+
+    if (expandBtn)   expandBtn.style.display   = showButtons && !expanded ? '' : 'none';
+    if (collapseBtn) collapseBtn.style.display = showButtons && expanded  ? '' : 'none';
   }
 
   pills.forEach(pill => {
@@ -191,6 +212,12 @@ const shelfTypes = ['All', ...[...new Set(shelf.map(item => item.type))].sort()]
   expandBtn?.addEventListener('click', () => {
     expanded = true;
     applyShelfView();
+  });
+
+  collapseBtn?.addEventListener('click', () => {
+    expanded = false;
+    applyShelfView();
+    document.getElementById('shelf')?.scrollIntoView({ behavior: 'smooth' });
   });
 
   applyShelfView();

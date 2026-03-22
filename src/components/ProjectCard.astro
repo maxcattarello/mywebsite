@@ -5,7 +5,7 @@ interface Props {
   tags:        string[];
   link:        string | null;
   period:      string;
-  type:        'work' | 'side';
+  type:        string;
 }
 
 const { title, description, tags, link, period, type } = Astro.props;
@@ -13,9 +13,12 @@ const { title, description, tags, link, period, type } = Astro.props;
 
 <article class="card project-card" data-type={type}>
   <div class="card__body">
-    <div class="card__header">
-      <h3 class="card__title">{title}</h3>
-      <span class="card__period">{period}</span>
+    <div class="shelf-card__header">
+      <div class="shelf-card__meta">
+        <h3 class="card__title">{title}</h3>
+        <p class="card__period">{period}</p>
+      </div>
+      <span class="shelf-card__badge">{type === 'work' ? 'Work' : 'Personal'}</span>
     </div>
 
     <p class="card__description">{description}</p>

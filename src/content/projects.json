@@ -1,7 +1,7 @@
 [
   {
     "title": "Juventus Data Lab",
-    "type": "side",
+    "type": "personal",
     "period": "Mar 2026",
     "description": "Bringing a data-driven lens to Juventus matches. Stats, analysis, and the stories numbers tell about the beautiful game.",
     "tags": ["sport", "data", "football"],
@@ -9,7 +9,7 @@
   },
   {
     "title": "[PLACEHOLDER]",
-    "type": "side",
+    "type": "personal",
     "period": "[PLACEHOLDER]",
     "description": "[PLACEHOLDER]",
     "tags": ["[PLACEHOLDER]"],

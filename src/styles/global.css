@@ -55,7 +55,7 @@
     --text-muted: #A09A7A;
     --border:     rgba(255, 241, 202, 0.1);
     --forest:     #8DB87A;
-    /* amber and sage stay the same */
+    --sage:       #8DB87A;
   }
 }
 
@@ -542,6 +542,7 @@ textarea { resize: vertical; }
   line-height: 1.6;
 }
 
+
 .tag--genre {
   color: var(--accent-alt);
   background: color-mix(in srgb, var(--accent-alt) 10%, transparent);
@@ -730,6 +731,19 @@ textarea { resize: vertical; }
   background: var(--bg-surface);
   color: var(--text-muted);
   transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+@media (prefers-color-scheme: dark) {
+  .shelf-pill:not(.shelf-pill--active) {
+    color: var(--forest);
+    border-color: var(--forest);
+  }
+  .shelf-pill--active {
+    color: #1A3318;
+  }
+  .shelf-card__badge {
+    color: #141410;
+  }
 }
 
 .shelf-pill:hover {
