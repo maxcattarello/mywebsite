@@ -58,6 +58,27 @@
   }
 }
 
+/* Manual theme overrides — take precedence over prefers-color-scheme */
+html[data-theme="dark"] {
+  --bg:         #141410;
+  --bg-surface: #1E1E18;
+  --bg-subtle:  #252520;
+  --text:       #FFF1CA;
+  --text-muted: #A09A7A;
+  --border:     rgba(255, 241, 202, 0.1);
+  --forest:     #8DB87A;
+}
+
+html[data-theme="light"] {
+  --bg:         #FFF1CA;
+  --bg-surface: #FFF8E7;
+  --bg-subtle:  #F5E8B0;
+  --text:       #1A1A1A;
+  --text-muted: #5A5A4A;
+  --border:     rgba(45, 79, 43, 0.15);
+  --forest:     #2D4F2B;
+}
+
 @media (max-width: 768px) {
   :root {
     --section-gap: 80px;
@@ -175,6 +196,18 @@ textarea { resize: vertical; }
   justify-content: space-between;
 }
 
+.nav__left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nav__right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
 .nav__logo {
   font-family: var(--font-display);
   font-size: var(--text-xl);
@@ -215,6 +248,73 @@ textarea { resize: vertical; }
 
 .nav__link:hover { color: var(--text); }
 .nav__link:hover::after { transform: scaleX(1); }
+
+/* Status widget */
+.nav__status {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: default;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.status-text {
+  font-size: 11px;
+  color: #6b7f5e;
+  white-space: nowrap;
+}
+
+.status-tooltip {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  background: #1a1f14;
+  color: #7ab648;
+  font-size: 11px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+  z-index: 200;
+}
+
+.status-tooltip--open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (max-width: 640px) {
+  .status-text { display: none; }
+  .nav__status { cursor: pointer; }
+}
+
+/* Theme toggle */
+.theme-toggle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  transition: background-color 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  background-color: var(--bg-subtle);
+  color: var(--text);
+}
 
 /* Hamburger */
 .nav__hamburger {
